@@ -1,0 +1,152 @@
+/* style.css */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte base e corpo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Menu fixo */
+nav {
+  background-color: #004d99;
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Lista horizontal do menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav ul li {
+  font-weight: 600;
+}
+
+nav ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #0073e6;
+  color: white;
+}
+
+/* Conteúdo principal */
+main {
+  max-width: 900px;
+  margin: 100px auto 40px;
+  padding: 0 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 30px;
+}
+
+/* Títulos */
+h1, h2 {
+  margin-bottom: 15px;
+  color: #004d99;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 15px;
+}
+
+/* Lista simples */
+ul.info-list {
+  list-style: disc inside;
+  margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border: 1.8px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  width: 150px;
+  background-color: #004d99;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0073e6;
+}
+
+/* Mensagem de sucesso/erro */
+.message {
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  display: none;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #004d99;
+  color: white;
+  margin-top: auto;
+  font-size: 0.9rem;
+  user-select: none;
+}
